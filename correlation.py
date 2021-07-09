@@ -41,7 +41,7 @@ def compute_phi(file_name,event):
             else:    
                 event_false_squirrel_false = event_false_squirrel_false+1
 
-    correlation=(event_true_squirrel_true*event_false_squirrel_false - event_true_squirrel_false*event_false_squirrel_true)/sqrt(event_true*event_false*squirrel_true*squirrel_false)
+    correlation=(event_true_squirrel_true*event_false_squirrel_false - event_true_squirrel_false*event_false_squirrel_true)/math.sqrt(event_true*event_false*squirrel_true*squirrel_false)
     return correlation
 
 def compute_correlations(file_name='journal.json'):
