@@ -59,9 +59,10 @@ def compute_correlations(file_name):
     return dict
 
 def diagnose(file_name):
-    pos=''
-    neg=''
+    
     dict=compute_correlations(file_name)
+    pos=list(dict.keys)[0]
+    neg=list(dict.keys)[0]
     for (key,val) in dict.items():
         if val>0 and val >dict[pos]:
             pos= key
