@@ -61,7 +61,7 @@ def compute_correlations(file_name):
 def diagnose(file_name):
     pos=''
     neg=''
-    dict=compute_correlations()
+    dict=compute_correlations(file_name)
     for (key,val) in dict.items():
         if val>0 and val >dict[pos]:
             pos= key
