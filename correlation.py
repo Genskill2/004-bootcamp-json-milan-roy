@@ -61,13 +61,13 @@ def compute_correlations(file_name):
 def diagnose(file_name):
     
     dict=compute_correlations(file_name)
-    pos=list(dict.keys())[0]
-    neg=list(dict.keys())[0]
+    pos=str(list(dict.keys())[0]()
+    neg=(list(dict.keys())[0])
     for (key,val) in dict.items():
         if val>0 and val >dict[pos]:
-            pos= key
+            pos= str(key)
         if val<0 and val<dict[neg]:
-            neg=key
+            neg=str(key)
 
     return pos,neg
 
