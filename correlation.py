@@ -44,7 +44,7 @@ def compute_phi(file_name,event):
     correlation=(event_true_squirrel_true*event_false_squirrel_false - event_true_squirrel_false*event_false_squirrel_true)/math.sqrt(event_true*event_false*squirrel_true*squirrel_false)
     return correlation
 
-def compute_correlations(file_name='journal.json'):
+def compute_correlations(file_name):
     list1=load_journal(file_name)
     events=[]
     dict={}
@@ -58,7 +58,7 @@ def compute_correlations(file_name='journal.json'):
      
     return dict
 
-def diagnose(file_name='journal.json'):
+def diagnose(file_name):
     pos=''
     neg=''
     dict=compute_correlations()
