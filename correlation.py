@@ -22,21 +22,21 @@ def compute_phi(file_name,event):
     list1=load_journal(file_name)
 
     for i in list1:
-        if i['squirrel']:
+        if i["squirrel"]:
             squirrel_true = squirrel_true+1
         else:
             squirrel_false = squirrel_false+1
 
-        if event in i['events']:
+        if event in i["events"]:
             event_true=event_true+1
-            if i['squirrel']:
+            if i["squirrel"]:
                 event_true_squirrel_true = event_true_squirrel_true+1
             else:    
                 event_true_squirrel_false = event_true_squirrel_false+1
 
         else:
             event_false=event_false+1
-            if i['squirrel']:
+            if i["squirrel"]:
                 event_false_squirrel_true = event_false_squirrel_true+1
             else:    
                 event_false_squirrel_false = event_false_squirrel_false+1
@@ -49,12 +49,12 @@ def compute_correlations(file_name):
     events=[]
     dict={}
     for i in list1:
-        list2=i['events']
+        list2=i["events"]
         for j in list2:
             if j not in events: 
                 events.append(j)
                 correlation=compute_phi(file_name,j)
-            dict[j]=correlation
+                dict[j]=correlation
      
     return dict
 
